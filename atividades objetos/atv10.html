@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        lista = []
+        const pessoa1 = {
+            nome: 'leticia',
+            idade: 16
+        }
+        const pessoa2 = {
+            nome: 'lara',
+            idade: 16
+        }
+        const pessoa3 = {
+            nome: 'brenda',
+            idade: 16
+        }
+        const pessoa4 = {
+            nome: 'nicolas',
+            idade: 26
+        }
+
+        lista.push(pessoa1)
+        lista.push(pessoa2)
+        lista.push(pessoa3)
+        lista.push(pessoa4)
+
+        function maisVelho(a) {
+            var maisvelho = ''
+            var maioridade = 0
+
+            for (item of lista) {
+                if (item.idade > maioridade){
+                    maisvelho = item.nome
+                    maioridade = item.idade
+                }
+            }
+            return maisvelho
+        }
+
+        console.log(maisVelho(lista))
+    </script>
+</body>
+</html>
